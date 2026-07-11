@@ -1,7 +1,7 @@
 # Task Manager
 
 ## Description
-A simple Django CRUD application for managing tasks.
+A simple Django task for managing tasks.
 
 ## Features
 - Create tasks
@@ -11,15 +11,6 @@ A simple Django CRUD application for managing tasks.
 - Delete tasks
 - Filter tasks by status
 - Dashboard with task statistics
-
-## Installation
-
-1. Clone the repository
-2. Create a virtual environment
-3. Activate the virtual environment
-4. Install dependencies
-5. Run migrations
-6. Start the server
 
 ## Commands
 
