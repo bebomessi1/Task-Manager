@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .card { border: 1px solid #ddd; border-radius: 8px; padding: 20px; max-width: 600px; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Task Details</h1>
+        <h2>{{ task.title }}</h2>
+
+        <p><strong>Description:</strong><br>{{ task.description }}</p>
+        <p><strong>Status:</strong> {{ task.status }}</p>
+        <p><strong>Created At:</strong> {{ task.created_at }}</p>
+        <p><strong>Updated At:</strong> {{ task.updated_at }}</p>
+
+        <p>
+            <a href="{% url 'update_task' task.id %}">Edit</a> |
+            <a href="{% url 'task_list' %}">Back to Task List</a>
+        </p>
+    </div>
+</body>
+</html>

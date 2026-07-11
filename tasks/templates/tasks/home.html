@@ -4,18 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            max-width: 500px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Task Manager Dashboard</h1>
+    <div class="card">
 
-    <hr>
+        <h1>Task Manager Dashboard</h1>
 
-    <h2>Tasks Status</h2>
+        <nav>
+            <a href="{% url 'task_list' %}">Task List</a> |
+            <a href="{% url 'task_create' %}">Create Task</a>
+        </nav>
 
-    <p>Pending Tasks: 0</p>
-    <p>In Progress Tasks: 0</p>
-    <p>Done Tasks: 0</p>
+        <hr>
+
+        <h2>Task Overview</h2>
+
+        <p><strong>Pending:</strong> {{ pending_count }}</p>
+        <p><strong>In Progress:</strong> {{ in_progress_count }}</p>
+        <p><strong>Done:</strong> {{ done_count }}</p>
+
+    </div>
 
 </body>
 </html>
